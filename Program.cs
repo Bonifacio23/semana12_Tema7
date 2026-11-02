@@ -63,13 +63,13 @@ namespace semana12_Tema7
             numeros_natu_con_recursividad(N - 1);
             
         }
-        static public int suma_arreglos(int[] numeros, int indice)
+        static public int suma_arreglos(int[] numero, int indice)
         {
-            if (indice >= numeros.Length)
+            if (indice >= numero.Length)
             {
                 return 0;
             }
-            return numeros[indice] + suma_arreglos(numeros, indice+1);
+            return numero[indice] + suma_arreglos(numero, indice+1);
         }
             static void Main(string[] args)
         {
@@ -129,15 +129,8 @@ namespace semana12_Tema7
                         int N5 = int.Parse(Console.ReadLine());
                         numeros_natu_con_recursividad(N5);break;
                     case 7:
-                        Console.WriteLine("Ingrese el tamaño del arreglo: ");
-                        int tamaño = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingrese los numeros del arreglo: ");
-                        int[] numeros = new int[tamaño];
-                        for (int i = 0; i < tamaño; i++)
-                        {
-                            numeros[i] = int.Parse(Console.ReadLine());
-                        }
-                        suma_arreglos(numeros,tamaño);
+                        int[] numeros = { 10, 15, 20, 25, 30 };
+                        Console.WriteLine($"la suma del arreglo es: {suma_arreglos(numeros,0)}");
                         break;
                     case 8:
                         Console.WriteLine("Saliendo...");
