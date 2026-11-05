@@ -15,7 +15,7 @@ namespace semana12_Tema7
             int S = 0;
             for (int c = 1; c <= N; c++)
             {
-                S = S + c;
+                S += c;
 
             }
             Console.WriteLine("la suma es: " + S);
@@ -77,6 +77,7 @@ namespace semana12_Tema7
             bool valor = true;
             while (valor) 
             {
+                Console.Clear();
                 string titulo = "MENU DE OPCIONES";
                 int posicion = (Console.WindowWidth - titulo.Length)/2;
 
@@ -129,7 +130,14 @@ namespace semana12_Tema7
                         int N5 = int.Parse(Console.ReadLine());
                         numeros_natu_con_recursividad(N5);break;
                     case 7:
-                        int[] numeros = { 10, 15, 20, 25, 30 };
+                        Console.WriteLine("ingrese el numero de elementos del arreglo: ");
+                        int n = int.Parse(Console.ReadLine());
+                        int[] numeros = new int[n];
+                        Console.WriteLine("ingrese los elementos del arreglo: ");
+                        for (int i = 0; i < n; i++)
+                        {
+                            numeros[i] = int.Parse(Console.ReadLine());
+                        }
                         Console.WriteLine($"la suma del arreglo es: {suma_arreglos(numeros,0)}");
                         break;
                     case 8:
